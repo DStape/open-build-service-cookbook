@@ -26,7 +26,7 @@
 # Install
 #
 
-%w{ obs-api apache2 apache2-mod_xforward rubygem-passenger-apache2 memcached }.each do |package_name|
+%w{ mysql-community-server mysql-community-server-client obs-api apache2 apache2-mod_xforward rubygem-passenger-apache2 memcached }.each do |package_name|
   package package_name do
     action :install
   end

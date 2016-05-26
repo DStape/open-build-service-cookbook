@@ -31,7 +31,7 @@
 #end
 include_recipe 'build-essential::default'
 
-package 'mysql-devel' do
+package 'libmysqlclient-devel' do
   action :install
 end
 
