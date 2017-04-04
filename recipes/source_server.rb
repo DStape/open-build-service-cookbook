@@ -20,6 +20,12 @@
 include_recipe 'open-build-service::_backend'
 include_recipe 'open-build-service::_signing'
 
+directory '/srv/obs/sources' do
+  owner "obsrun"
+  group "obsrun"
+  action "create"
+end
+
 service 'obssrcserver' do
   service_name 'obssrcserver'
   supports restart: true, status: true
