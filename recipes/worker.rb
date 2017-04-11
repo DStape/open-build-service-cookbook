@@ -25,7 +25,7 @@ include_recipe 'open-build-service::_sysconfig-obs-server'
   end
 end
 
-package 'kvm' do
+package 'qemu-kvm' do
   action :install
   only_if { node['open-build-service']['worker']['kvm'] == true }
 end
